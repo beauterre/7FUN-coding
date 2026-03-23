@@ -4,6 +4,8 @@
 
 [introduction video](https://youtu.be/mGBZ89dtOuE)
 
+[overview](https://beauterre.github.io/7FUN-coding/course.html)
+
 Welcome to the journey where we turn **ideas into code** and tackle problems like digital wizards! ⚡
 
 ---
