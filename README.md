@@ -9,6 +9,11 @@ Welcome to the journey where we turn **ideas into code** and tackle problems lik
 ---
 
 ## 1. Philosophy & Computational Thinking 🧠
+[lesson](https://www.youtube.com/watch?v=9xclJL7E0Vc)
+
+[homework](https://www.youtube.com/watch?v=nTBE9wnsgRA)
+
+Description:
 Programming isn't just typing—it’s **thinking**.  
 We’ll challenge assumptions and explore patterns.
 
