@@ -1,8 +1,8 @@
-# 7FUN-coding
-the playlist/course on youtube.
-https://www.youtube.com/watch?v=nTBE9wnsgRA&list=PLxTOAxZtf9AyAHjk490p6R653cd2aLMDB
 
-# 🖥️ Programming Adventure Course
+# 🖥️ Programming Adventure Course: 7FUN-coding
+[the playlist/course on youtube.](https://www.youtube.com/watch?v=nTBE9wnsgRA&list=PLxTOAxZtf9AyAHjk490p6R653cd2aLMDB)
+
+[introduction video](https://youtu.be/mGBZ89dtOuE)
 
 Welcome to the journey where we turn **ideas into code** and tackle problems like digital wizards! ⚡
 
