@@ -34,6 +34,7 @@ We’ll explore them, name them, and see them in action.
 
 ## 3. Free Programming Environment & First Steps 🌐
 - Choosing your **language sandbox:** HTML, CSS, JavaScript, etc.
+- https://codepen.io/editor/SnoepGames/pen/019d365d-320f-7bd8-9d19-bb29eb996c2f
 - Understanding **declaration vs definition vs language**.
 - **Turing completeness:** Why some languages can do anything a computer can do.
 - Setting up a **CodePen** account.
