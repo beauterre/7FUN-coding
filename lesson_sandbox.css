@@ -1,0 +1,164 @@
+/* ===== Base Layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e8dcc0; /* sand */
+  color: #3b2f2f;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
+  background: #4b2e2e; /* deep C64 brown */
+  color: #f2e6c9;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ===== Lessons / Cards ===== */
+.lesson {
+  background: #f5ecd7; /* parchment */
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60, 40, 20, 0.2);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+/* ===== Example Grid ===== */
+.examples {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.examples li {
+  margin: 0;
+}
+
+.examples a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  background: #d9c8a9;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #3b2f2f;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.examples a:hover {
+  background: #a67c52; /* warm highlight */
+  color: #fff7e6;
+  text-decoration: underline;
+}
+
+/* ===== Code Editor ===== */
+#code {
+  background-color: #2b1d1d; /* dark brown terminal */
+  color: #9fe870; /* soft green text */
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+#code:focus {
+  border: 2px solid #c2a878;
+  box-shadow: 0 0 6px rgba(194, 168, 120, 0.6);
+}
+
+/* ===== Comment Panel ===== */
+#comment {
+  display: block; /* fixed invalid inline-box */
+  width: 50%;
+  float: right;
+  color: #5a4632;
+}
+
+/* ===== Output Console ===== */
+#output {
+  background: #1a0f0f;
+  border: 2px solid #6b3e3e;
+  color: #ff9b9b; /* softer red */
+  font-family: monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  min-height: 40px;
+}
+
+/* ===== Buttons ===== */
+button,
+button#doit {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #a67c52;
+  color: #fff7e6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover,
+button#doit:hover {
+  background: #7d5a3c;
+}
+
+/* ===== Misc ===== */
+iframe {
+  width: 533px;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+}
+
+.section {
+  margin-top: 1rem;
+}
+
+.section h3 {
+  margin-bottom: 0.3rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: #7a5c3a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#code, #output {
+  letter-spacing: 0.03em;
+}
+
+#output::before {
+  content: "READY.\A";
+  white-space: pre;
+  color: #c2a878;
+}

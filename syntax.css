@@ -1,0 +1,5 @@
+.tok-keyword { color: #dcdcaa; }
+.tok-string  { color: #ce9178; }
+.tok-number  { color: #b5cea8; }
+.tok-comment { color: #6a9955; font-style: italic; }
+.tok-builtin { color: #4ec9b0; }

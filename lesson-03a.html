@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+  <!--<link rel="stylesheet" href="syntax.css"> -->
+</head>
+<body>
+
+<header>
+	<h1>7FUN coding - 3- ⛱️ The Sandbox</h1>
+   <p>The easy way to learn to code.</p>
+</header>
+
+
+<main>
+
+
+  <section class="lesson">
+ 	<h3>Examples</h3>
+	<ul class="examples"></ul>
+	<div id="start_lesson" style="display:none;">
+		<div id="exercise"></div>
+		<pre id="code" contenteditable="true" spellcheck="false">
+		</pre>
+		<button id="run">RUN CODE</button>
+		<div id="comment"></div>
+		<div id="output"></div>
+	</div>
+
+
+  </section>
+
+</main>
+<script>
+// ==========================
+// EXAMPLES FOR this LESSON
+// ==========================
+const next_lesson_url = "lesson-03b.html";
+const examples = [
+  {
+    name: "1. Hello world",
+    code: `print("hello world!");`,
+    exercise: `Run the code, look at the output. Change the code to output to "hello sandbox!", Run the CODE again!`,
+    correct: `hello sandbox!`
+  },
+  {
+    name: "2. Hello SAND",
+    code: `print("SAND");`,
+    exercise: `Change the output to small caps: "sand";`,
+    correct: `sand`
+  },
+  {
+    name: "3. Hello Calculus",
+    code: `print(1+2);`,
+    exercise: `Change the output to "5";`,
+    correct: `5`
+  }
+];
+
+
+</script>
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+<!--<script src="syntax.js"></script>
+// syntax highlighting has some preservation issues.. not the best way to do it..
+-->
+
+</body>
+</html>
