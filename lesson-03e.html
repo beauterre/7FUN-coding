@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Loops & Array Iteration</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3e - Loops & Array Iteration</h1>
+  <p>Learn how to repeat tasks and work through arrays automatically.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to understand loops</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 3e
+// ==========================
+const next_lesson_url = "lesson-04a.html";
+
+const examples = [
+  {
+    name: "1. Simple for loop",
+    code: `for(let i=1; i<=5; i++){\n  print(i);\n}`,
+    exercise: `Change the loop so it counts down from 5 to 1.`,
+    correct: `5\n4\n3\n2\n1`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. While loop",
+    code: `let x = 1;\nwhile(x <= 5){\n  print(x);\n  x++;\n}`,
+    exercise: `Change it so it prints 10,9,8,7,6.`,
+    correct: `10\n9\n8\n7\n6`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Looping through arrays (for)",
+    code: `let fruits = ["apple","banana","cherry"];\nfor(let i=0;i<fruits.length;i++){\n  print(fruits[i]);\n}`,
+    exercise: `Change the array so output is: orange, lemon, kiwi`,
+    correct: `orange\nlemon\nkiwi`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Pop last element",
+    code: `let pets = ["cat","dog","hamster"];\npets.pop();\nprint(pets);`,
+    exercise: `Remove the last element using pop so output is just "cat,dog"`,
+    correct: `cat,dog`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. Shift first element",
+    code: `let colors = ["red","green","blue"];\ncolors.shift();\nprint(colors);`,
+    exercise: `Remove the first element using shift.`,
+    correct: `green,blue`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. Unshift to add elements at the start",
+    code: `let nums = [2,3,4];\nnums.unshift(1);\nprint(nums);`,
+    exercise: `Add 0 at the start using unshift.`,
+    correct: `0,2,3,4`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. Loop backwards",
+    code: `let letters = ["a","b","c","d"];\nfor(let i=letters.length-1;i>=0;i--){\n  print(letters[i]);\n}`,
+    exercise: `Change it so output is: d,c,b,a`,
+    correct: `d\nc\nb\na`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. Remove elements while looping (shift)",
+    code: `let boops = ["meh","ok","yay"];\nwhile(boops.length>0){\n  print(boops.shift());\n}`,
+    exercise: `Explain why shift removes elements while printing each one.`,
+    correct: `meh\nok\nyay`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "9. Combine loops and math",
+    code: `let numbers = [1,2,3,4,5];\nlet sum = 0;\nfor(let i=0;i<numbers.length;i++){\n  sum += numbers[i];\n}\nprint(sum);`,
+    exercise: `Change numbers so output is 100.`,
+    correct: `100`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "10. Fun loop with strings",
+    code: `let boops = ["meh","ok","yay"];\nfor(let i=0;i<boops.length;i++){\n  print("boop: "+boops[i]);\n}`,
+    exercise: `Change boops array to output: "boop: fun", "boop: woo", "boop: yay"`,
+    correct: `boop: fun\nboop: woo\nboop: yay`,
+    hint: `nTBE9wnsgRA`
+  }
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

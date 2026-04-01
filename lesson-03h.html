@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Functions & Parameters</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3h - Functions & Parameters</h1>
+  <p>Learn how to create reusable code blocks with functions.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to understand functions</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 4a
+// ==========================
+const next_lesson_url = "lesson-03i.html";
+
+const examples = [
+  {
+    name: "1. Simple function",
+    code: `function greet(){\n  print("Hello!");\n}\ngreet();`,
+    exercise: `Change the function to print "Hello Sandbox!"`,
+    correct: `Hello Sandbox!`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. Function with input",
+    code: `function greet(name){\n  print("Hello " + name);\n}\ngreet("Alice");`,
+    exercise: `Call the function with your own name.`,
+    correct: `Hello [your name]`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Function returning a value",
+    code: `function add(a,b){\n  return a + b;\n}\nprint(add(3,5));`,
+    exercise: `Change the numbers to get output 20.`,
+    correct: `20`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Default parameters",
+    code: `function greet(name="stranger"){\n  print("Hello " + name);\n}\ngreet();`,
+    exercise: `Change the default name to "friend".`,
+    correct: `Hello friend`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. Multiple returns",
+    code: `function multiply(a,b){\n  return a*b;\n}\nprint(multiply(4,5));`,
+    exercise: `Change values to output 42.`,
+    correct: `42`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. Overloaded behavior (optional inputs)",
+    code: `function welcome(name, greeting){\n  if(!greeting) greeting="Hello";\n  print(greeting + " " + name);\n}\nwelcome("Alice");`,
+    exercise: `Call the function to print "Hi Bob"`,
+    correct: `Hi Bob`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. Functions with arrays",
+    code: `function sumArray(arr){\n  let sum=0;\n  arr.forEach(function(n){ sum+=n; });\n  return sum;\n}\nprint(sumArray([1,2,3]));`,
+    exercise: `Change array to [10,20,30] to output 60.`,
+    correct: `60`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. Functions with objects",
+    code: `function describe(person){\n  print(person.name + " is " + person.age + " years old");\n}\ndescribe({name:"Alice", age:25});`,
+    exercise: `Change age to 30 and name to "Bob".`,
+    correct: `Bob is 30 years old`,
+    hint: `nTBE9wnsgRA`
+  }
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

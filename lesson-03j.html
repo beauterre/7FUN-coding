@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Algorithm Practice</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3i - Algorithm Practice</h1>
+  <p>Learn how to solve small coding challenges step by step.</p>
+</header>
+
+<main>
+  <section class="lesson">
+    <h3>Exercises to practice algorithms</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+  </section>
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 3i
+// ==========================
+const next_lesson_url = "lesson-04a.html";
+
+const examples = [
+  {
+    name: "1. First 5 primes",
+    code: `let primes = [];\nlet n = 2;\nwhile(primes.length < 5){\n  let isPrime = true;\n  for(let i=2;i<n;i++){\n    if(n%i===0){ isPrime=false; break; }\n  }\n  if(isPrime) primes.push(n);\n  n++;\n}\nprint(primes);`,
+    exercise: `Change the code to find the first 8 primes instead of 5.`,
+    correct: `[2,3,5,7,11,13,17,19]`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. Sum of primes",
+    code: `let sum = 0;\nlet primes = [2,3,5,7,11];\nprimes.forEach(function(n){ sum+=n; });\nprint(sum);`,
+    exercise: `Change the array to first 7 primes and print the sum.`,
+    correct: `58`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Biggest happy number under 1000",
+    code: `function sumSquares(n){\n  let sum=0;\n  while(n>0){\n    let d=n%10;\n    sum+=d*d;\n    n=Math.floor(n/10);\n  }\n  return sum;\n}\n\nfunction isHappy(n){\n  let seen = [];\n  while(n!==1 && !seen.includes(n)){\n    seen.push(n);\n    n=sumSquares(n);\n  }\n  return n===1;\n}\n\nlet happy = 0;\nfor(let i=1;i<1000;i++){\n  if(isHappy(i)) happy=i;\n}\nprint(happy);`,
+    exercise: `Change the limit to 500 and print the biggest happy number under 500.`,
+    correct: `499`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. FizzBuzz first 15 numbers",
+    code: `for(let i=1;i<=15;i++){\n  if(i%3===0 && i%5===0) print("FizzBuzz");\n  else if(i%3===0) print("Fizz");\n  else if(i%5===0) print("Buzz");\n  else print(i);\n}`,
+    exercise: `Change the loop to run to 20.`,
+    correct: `1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. Reverse array",
+    code: `let arr = [1,2,3,4,5];\nlet rev = [];\nfor(let i=arr.length-1;i>=0;i--){ rev.push(arr[i]); }\nprint(rev);`,
+    exercise: `Change the array to [10,20,30] and reverse it.`,
+    correct: `[30,20,10]`,
+    hint: `nTBE9wnsgRA`
+  }
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

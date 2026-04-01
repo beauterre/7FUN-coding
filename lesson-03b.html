@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Variables & Operators</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3b-Variables & Operators </h1>
+  <p>The easy way to learn to code.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to understand variables and operators</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR this LESSON
+// ==========================
+const next_lesson_url = "lesson-03c.html";
+
+const examples = [
+  {
+    name: "1. Hello world with variable",
+    code: `let greeting = "hello world!";\nprint(greeting);`,
+    exercise: `Run the code, see the output. Then change the variable <strong>greeting</strong> to output <strong>hello sandbox!</strong>`,
+    correct: `hello sandbox!`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. Assign a number to a variable",
+    code: `let x = 5;\nprint(x);`,
+    exercise: `Change the value of x so the output is <strong>10</strong>.`,
+    correct: `10`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Calculating with variables",
+    code: `let x = 5;\nlet y = 4;\nlet z = x*y;\nprint(z);`,
+    exercise: `Change the value of x so the output is <strong>21</strong>.`,
+    correct: `21`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Why is 8 scared of 7?",
+    code: `let eight="ate";\n\nlet goof = 5;\ngoof = goof + 1;\nprint(goof);\n\nprint(eight);\n\nlet boop = 3;\nboop = boop + goof;\nprint(boop);`,
+    exercise: `Change the code so the output is <strong>7\nate\n9</strong>.`,
+    correct: `7\nate\n9`,
+    hint: `nTBE9wnsgRA`
+  },,
+  {
+    name: "5. Update variable with += ",
+    code: `let y = 3;\ny +=  9;\nprint(y);`,
+    exercise: `Change the code so the output is <strong>9</strong>. <br><small>Hint: +=, -=, /= and *= are examples of "operators"</small>`,
+    correct: `9`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. Increment operator (++)",
+    code: `let z = 4;\nz--;\nprint(z);`,
+    exercise: `Use the <strong>++</strong> operator to increase z by 1 before printing, so output is <strong>5</strong>.`,
+    correct: `5`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. Decrement variable",
+    code: `let a = 7;\na/=5;\nprint(a);`,
+    exercise: `Use the <strong>--</strong> operator to decrease a by 1 before printing, so output is <strong>6</strong>.`,
+    correct: `6`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. Pre-increment vs post-increment",
+    code: `let b = 2;\nprint(b++);`,
+    exercise: `The code prints 2. Change it to <strong>++b</strong> so it prints <strong>3</strong>.`,
+    correct: `3`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "9. Combine operators",
+    code: `let c = 3;\nc += 2;\nc++;`,
+    exercise: `Change the code so that c prints <strong>6</strong> using a combination of +, += and ++ operators.<br><small>Hint: do not forget to print the answer!</small>`,
+    correct: `6`,
+    hint: `nTBE9wnsgRA`
+  },
+	{
+	  name: "10. Strings to operators.",
+	  code: `let points = 9;\nlet operator = "*";\nlet expr = points+operator+" 2 + 5";\nlet total = eval(expr);\nprint("You have " + total + " points");`,
+	  exercise: `Change the string in <strong>expr</strong> so that the output reads: <strong>You have 25 points</strong>.<br><small>Hint: you can use "*" or "+" in the string and it will be calculated by eval().You might want to temporarily add <i>print(expr);</i> before evaluating it..</small>`,
+	  correct: `You have 25 points`,
+	  hint: `nTBE9wnsgRA`
+	}
+];
+</script>
+	
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

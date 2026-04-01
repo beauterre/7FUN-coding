@@ -10,7 +10,7 @@
 <body>
 
 <header>
-	<h1>7FUN coding - 3- ⛱️ The Sandbox</h1>
+	<h1>7FUN coding - ⛱️ The Sandbox - 3a-Output </h1>
    <p>The easy way to learn to code.</p>
 </header>
 
@@ -19,7 +19,7 @@
 
 
   <section class="lesson">
- 	<h3>Examples</h3>
+ 	<h3>Excercises to understand output</h3>
 	<ul class="examples"></ul>
 	<div id="start_lesson" style="display:none;">
 		<div id="exercise"></div>
@@ -28,6 +28,7 @@
 		<button id="run">RUN CODE</button>
 		<div id="comment"></div>
 		<div id="output"></div>
+		<div id="hint"><a href="">📺 watch introduction video..</a></div>
 	</div>
 
 
@@ -43,21 +44,87 @@ const examples = [
   {
     name: "1. Hello world",
     code: `print("hello world!");`,
-    exercise: `Run the code, look at the output. Change the code to output to "hello sandbox!", Run the CODE again!`,
-    correct: `hello sandbox!`
+    exercise: `Run the code, look at the output. Change the code by clicking on it and typing, so that it outputs: <strong>hello sandbox!</strong>, Then.. run the code again!`,
+    correct: `hello sandbox!`,
+    hint: `nTBE9wnsgRA`
   },
   {
     name: "2. Hello SAND",
     code: `print("SAND");`,
-    exercise: `Change the output to small caps: "sand";`,
-    correct: `sand`
+    exercise: `Change the output to small caps: <strong>sand</strong>;`,
+    correct: `sand`,
+    hint: `nTBE9wnsgRA`
   },
   {
-    name: "3. Hello Calculus",
+    name: "3. A pint of sand",
+    code: `pint("sand");`,
+    exercise: `Change the output to: <strong>sand</strong>;`,
+    correct: `sand`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Hello Calculus",
     code: `print(1+2);`,
-    exercise: `Change the output to "5";`,
-    correct: `5`
-  }
+    exercise: `Change the output to <strong>5</strong>;`,
+    correct: `5`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+  name: "5. Strings vs Numbers",
+  code: `print("4"+1); `,
+  exercise: `Change the output to the number <strong>5</strong>.<br><small>explanation: "4" is a string, text.. 1 is a number..  adding a text to a number first turns the number into a text.. then adds the texts together..</small>`,
+  correct: `5`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "6. Fix the Error",
+  code: `print(hello);`,
+  exercise: `Fix the code so it correctly prints: <strong>hello</strong>. <br><small>Hint: you might want to look at the difference between this code and exercise 1..</small>`,
+  correct: `hello`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "7. Escaping",
+  code: `print("She said: "Hello."");`,
+  exercise: `Change the output to:<br><strong>She said: "Hello."</strong><br><small>hint: you cannot print a quote, because this marks the end of a string.. However, we can use either ' or " .. or we can "escape" a quote by typing \\"..`,
+  correct: `She said: "Hello."`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "8. Combining Text and Math",
+  code: `print("you have: " + ((5+7)*18) + " points");`,
+  exercise: `Change the math so the output becomes:<br><strong>you have: 100 points</strong>`,
+  correct: `you have: 100 points`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "9. snake_case",
+  code: `print("HelloWorld");`,
+  exercise: `Change the output to snake_case*:<br><strong>hello_world</strong><br> <small>*)snake_casing is a convention to combine two words into one string (not seperated by a space, but connected with a snake or underscore).</small>`,
+  correct: `hello_world`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "10. camelCase",
+  code: `print("helloworld"); `,
+  exercise: `Change the output to camelCase*:<br><strong>helloWorld</strong><br><small>*) camelCase is another convention used to combine two words into one string (not seperated by a space).</small>`,
+  correct: `helloWorld`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "11. PascalCase (or upper CamelCase)",
+  code: `print("helloworld");`,
+  exercise: `Change the output to PascalCase*:<br><strong>HelloWorld</strong><br><small>*) camelCase is another convention used to combine two words into one string (not seperated by a space).</small>`,
+  correct: `HelloWorld`,
+    hint: `nTBE9wnsgRA`
+},
+{
+  name: "12. String concatenation",
+  code: `print("I have "+(30/5)+" apples");`,
+  exercise: `Change the output to: <strong>I have 3 apples</strong>`,
+  correct: `I have 3 apples`,
+    hint: `nTBE9wnsgRA`
+}
 ];
 
 

@@ -4,6 +4,17 @@
 const ul = document.querySelector(".examples");
 console.log(ul);
 
+function deactivateExamples() {
+    // get all elements with class "example"
+    var examples = document.getElementsByClassName("example");
+
+    // convert HTMLCollection to Array so we can iterate safely
+    Array.from(examples).forEach(function(el) {
+        // remove "active" class if present
+        el.classList.remove("active");
+    });	
+}
+// initialise example list.
 examples.forEach(example => {
   const li = document.createElement("li");
   const a = document.createElement("a");
@@ -15,9 +26,13 @@ examples.forEach(example => {
 
   a.onclick = function(e) {
     e.preventDefault();
-    document.getElementById("code").textContent = example.code;
+	deactivateExamples();
+	a.className="example active";
+	revealText(document.getElementById("code"), example.code, 100);
     document.getElementById("output").innerHTML = "";
-    document.getElementById("exercise").innerHTML = example.exercise;
+    document.getElementById("hint").innerHTML = "";
+    document.getElementById("comment").innerHTML = "";
+	revealText(document.getElementById("exercise"), example.exercise, 300);
     document.getElementById("start_lesson").style.display = "";
     current_example = example; 
 
@@ -30,14 +45,52 @@ examples.forEach(example => {
 });
 let current_example=null;
 
+// typewriter effect
+function revealText(element, text, duration = 300) {
+  // Store full text in attribute
+  element.setAttribute("goal", text);
 
+  // Initialize count
+  element.setAttribute("count", 0);
+
+  // Clear current content
+  element.innerHTML = "";
+
+  const totalChars = text.length;
+  if (totalChars === 0) return;
+
+  // Compute per-character interval
+  const interval = duration / totalChars;
+
+  function animate() {
+    let goal = element.getAttribute("goal");
+    let count = parseInt(element.getAttribute("count"), 10);
+
+    // Increase count
+    count++;
+    element.setAttribute("count", count);
+
+    // Update visible text
+    element.innerHTML = goal.substring(0, count);
+
+    // Stop when done
+    if (count >= totalChars) return;
+
+    // Continue animation
+    setTimeout(animate, interval);
+  }
+
+  // Start the animation loop
+  animate();
+}
 // ==========================
 // OUTPUT FUNCTION
 // ==========================
 function createOutput(outputDiv) {
   return function print(...values) {
     const line = document.createElement("div");
-    line.textContent = values.map(v => String(v)).join(" ");
+	revealText(line, values.map(v => String(v)).join(" "), 300);
+
     outputDiv.appendChild(line);
   };
 }
@@ -103,8 +156,41 @@ function checkAnswer()
 	outputDiv.style.color="#f00"; 
 	outputDiv.style.borderColor="#f00"; 
 	if(typeof(playSfx)!="undefined")playSfx("incorrect");
-		if(typeof(playDelayedSfx)!="undefined")playDelayedSfx("voiceIncorrect",350);
+		if(typeof(playDelayedSfx)!="undefined")playDelayedSfx("voiceIncorrect",400);
+	// show the hint link..	
+	document.getElementById("hint").innerHTML='';
+	if (typeof(current_example.hint) !== "undefined") 
+	{
+		// get the container
+		var hintContainer = document.getElementById("hint");
 
+		// create clickable label
+		var hintLabel = document.createElement("div");
+		hintLabel.innerHTML = "📺 Watch this hint, if you are stuck...";
+		hintLabel.style.cursor = "pointer";
+		hintLabel.style.fontWeight = "bold";
+		hintLabel.style.marginBottom = "6px";
+
+		// create the iframe but hide it initially
+		var hintIframe = document.createElement("iframe");
+		hintIframe.width = "560";
+		hintIframe.height = "315";
+		hintIframe.src = "https://www.youtube.com/embed/" + current_example.hint;
+		hintIframe.title = "Hint Video";
+		hintIframe.frameBorder = "0";
+		hintIframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+		hintIframe.allowFullscreen = true;
+		hintIframe.style.display = "none"; // hide initially
+
+		// toggle iframe visibility when label is clicked
+		hintLabel.addEventListener("click", function() {
+			hintIframe.style.display = hintIframe.style.display === "none" ? "block" : "none";
+		});
+
+		// append to container
+		hintContainer.appendChild(hintLabel);
+		hintContainer.appendChild(hintIframe);
+	}
 	document.getElementById("comment").innerText='expected output = "'+current_example.correct+'"\nChange the code to produce this output';
   }
 }
@@ -112,6 +198,7 @@ function checkAnswer()
 function checkAllComplete()
 {
 	let complete=true;
+	let nextclicked=false;
 	for(let i in examples)
 	{
 		let example=examples[i];
@@ -122,6 +209,14 @@ function checkAllComplete()
 			if(example.dom.innerText.substr(0,1)!="✓")
 			{
 				complete=false;
+				if(nextclicked==false)
+				{
+					nextclicked=true;
+					// now load this one..
+					setTimeout(function() {
+					  example.dom.click();
+					}, 1500);	
+				}					
 			}
 		}else
 		{

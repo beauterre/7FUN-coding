@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Arrays & Sorting</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3d - Arrays & Sorting</h1>
+  <p>Learn how to store multiple values and sort them conceptually.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to understand arrays</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 3d
+// ==========================
+const next_lesson_url = "lesson-03e.html";
+
+const examples = [
+  {
+    name: "1. Creating an array",
+    code: `let fruits = ["apple", "banana", "cherry"];\nprint(fruits);`,
+    exercise: `Change the array to include <strong>"orange"</strong> as well.`,
+    correct: `apple,banana,cherry,orange`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. Accessing elements",
+    code: `let colors = ["red", "green", "blue"];\nprint(colors[0]);`,
+    exercise: `Change the index to print <strong>"green"</strong>.`,
+    correct: `green`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Modifying elements",
+    code: `let pets = ["cat", "dog", "hamster"];\npets[1] = "parrot";\nprint(pets);`,
+    exercise: `Change pets[0] to <strong>"turtle"</strong>.`,
+    correct: `turtle,parrot,hamster`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Array length",
+    code: `let scores = [10, 20, 30, 40];\nprint(scores.length);`,
+    exercise: `Add one more score so length becomes <strong>5</strong>.`,
+    correct: `5`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. Simple sort (conceptual)",
+    code: `let numbers = [5, 2, 8, 1];\nprint(numbers);`,
+    exercise: `Imagine sorting numbers from smallest to largest. Change the array manually so it reads sorted.`,
+    correct: `1,2,5,8`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. Strings in arrays",
+    code: `let names = ["Zoe", "Anna", "Bob"];\nprint(names);`,
+    exercise: `Reorder the array alphabetically (conceptual) without a function, so output is: <strong>Anna,Bob,Zoe</strong>.`,
+    correct: `Anna,Bob,Zoe`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. Combining arrays and variables",
+    code: `let scores = [10, 20, 30];\nlet bonus = 5;\nscores[1] = scores[1] + bonus;\nprint(scores);`,
+    exercise: `Change bonus so output becomes <strong>10,50,30</strong>.`,
+    correct: `10,50,30`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. Funny array example",
+    code: `let boops = ["meh", "ok", "yay"];\nprint(boops);`,
+    exercise: `Reorder the array so <strong>"yay"</strong> comes first.`,
+    correct: `yay,meh,ok`,
+    hint: `nTBE9wnsgRA`
+  }
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

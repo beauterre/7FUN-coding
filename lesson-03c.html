@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Conditional Logic</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3c - Conditional Logic</h1>
+  <p>Learn how to make decisions with code.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to understand conditional logic</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 3c
+// ==========================
+const next_lesson_url = "lesson-03d.html";
+
+const examples = [
+  {
+    name: "1. 🟰 Simple comparison",
+    code: `let x = 5;\nprint(x > 3);`,
+    exercise: `Change the variable <strong>x</strong> so that output is <strong>false</strong>.`,
+    correct: `false`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. ✅ Using if statement",
+    code: `let score = 3;\nif(score == 5){\n  print("pass");\n}`,
+    exercise: `Change the variable <strong>score</strong> so the output becomes <strong>"pass"</strong>.`,
+    correct: `pass`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. ⇆ If/else statement",
+    code: `let age = 17;\nif(age >= 18){\n  print("adult");\n} else {\n  print("minor");\n}`,
+    exercise: `Change <strong>age</strong> so that output is <strong>"adult"</strong>.`,
+    correct: `adult`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. ⚙️ Combine variables in condition",
+    code: `let a = 3;\nlet b = 5;\nif(a + b > 7){\n  print("big");\n} else {\n  print("small");\n}`,
+    exercise: `Change a or b so the output is <strong>"small"</strong>.`,
+    correct: `small`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. 👬 Equality vs strict equality",
+    code: `let n = "5";\nprint(n == 5);\nprint(n === 5);`,
+    exercise: `Predict the output. Change n to a number so that both print statements output <strong>true</strong>.`,
+    correct: `true\ntrue`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. ☀️🌳🧺🍉🌼Logical AND",
+    code: `let sunny = true;\nlet weekend = false;\nif(sunny && weekend){\n  print("picnic time");\n} else {\n  print("stay inside");\n}`,
+    exercise: `Change sunny or weekend so output is <strong>"picnic time"</strong>.`,
+    correct: `picnic time`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. 🍕🥱 Logical OR",
+    code: `let tired = true;\nlet hungry = false;\nif(tired || hungry){\n  print("nap time");\n} else {\n  print("keep coding");\n}`,
+    exercise: `Change variables so output is <strong>"keep coding"</strong>.`,
+    correct: `keep coding`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. 🎭 Shakeboop",
+    code: `let boop = 3;\nif(boop != 5){\n  print("Not a boop?");\n} else {\n  print("2boop or !2boop");\n}`,
+    exercise: `Change <strong>boop</strong> so output is <strong>"2boop or !2boop"</strong>.`,
+    correct: `2boop or !2boop`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+  name: "9. 🧙 One () to rule them all",
+  code: `let Gandalf = true; // remember..? he died...\nlet Balrog = true;\nlet Bridge = true; // but he took out the bridge first!\nif( (Gandalf || Bridge) && Balrog){\n  print("@$^*! Blast! Thou hast bepassed me! The world is forfeit! 🔥🌍🔥");\n} else {\n  print("Thou shalt not pass!");\n}`,
+  exercise: `Change the variables so that the output becomes <strong>Thou shalt not pass!</strong>`,
+  correct: `Thou shalt not pass!`,
+  hint: `nTBE9wnsgRA`
+},
+  {
+  name: "10. ≈ Kinda...",
+  code: `let x = 3.14;\nif (Math.abs(x - 3) < 0.1) {\n    print("x is close to 3");\n} else {\n    print("x is nowhere near to 3");\n}`,
+  exercise: `Change the variables so that the output becomes <strong>x is close to 3</strong>`,
+  correct: `x is close to 3`,
+  hint: `nTBE9wnsgRA`
+}
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

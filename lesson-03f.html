@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - Objects</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3f - Introduction to Objects</h1>
+  <p>Learn how to structure related data using objects.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to understand objects</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 3f
+// ==========================
+const next_lesson_url = "lesson-04a.html";
+
+const examples = [
+  {
+    name: "1. Creating a simple object",
+    code: `let person = {\n  name: "Alice",\n  age: 25\n};\nprint(person);`,
+    exercise: `Add a property "city" with value "Paris".`,
+    correct: `name: Alice, age: 25, city: Paris`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. Accessing object properties",
+    code: `let car = {\n  brand: "Toyota",\n  year: 2020\n};\nprint(car.brand);`,
+    exercise: `Change it to print the year instead.`,
+    correct: `2020`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Updating properties",
+    code: `let phone = {\n  model: "iPhone 12",\n  price: 799\n};\nphone.price = 699;\nprint(phone);`,
+    exercise: `Change model to "iPhone 13".`,
+    correct: `model: iPhone 13, price: 699`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Multiple objects",
+    code: `let dog = {name: "Fido", breed: "Beagle"};\nlet cat = {name: "Whiskers", breed: "Siamese"};\nprint(dog.name);\nprint(cat.name);`,
+    exercise: `Change the cat's name to "Garfield".`,
+    correct: `Fido\nGarfield`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. Objects with numbers",
+    code: `let product = {name: "Shoes", price: 50};\nproduct.price += 10;\nprint(product.price);`,
+    exercise: `Increase price by 25 so output is 75.`,
+    correct: `75`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. Fun object example",
+    code: `let boop = {sound: "meh", fun: true};\nprint(boop.sound);`,
+    exercise: `Change sound to "yay".`,
+    correct: `yay`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. Objects and arrays combined",
+    code: `let student = {name: "Sam", scores: [10, 20, 30]};\nprint(student.scores[1]);`,
+    exercise: `Change it to print the last score.`,
+    correct: `30`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. Adding a new property dynamically",
+    code: `let game = {title: "Maze", level: 3};\ngame.difficulty = "medium";\nprint(game);`,
+    exercise: `Change difficulty to "hard".`,
+    correct: `title: Maze, level: 3, difficulty: hard`,
+    hint: `nTBE9wnsgRA`
+  }
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>

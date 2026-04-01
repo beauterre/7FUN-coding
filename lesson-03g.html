@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7FUN coding - forEach & for…in</title>
+  <link rel="stylesheet" href="lesson_sandbox.css">
+</head>
+<body>
+
+<header>
+  <h1>7FUN coding - ⛱️ The Sandbox - 3g - Iterating Arrays and Objects</h1>
+  <p>Learn how to loop through arrays and objects with `forEach` and `for…in`.</p>
+</header>
+
+<main>
+
+  <section class="lesson">
+    <h3>Exercises to practice array and object iteration</h3>
+    <ul class="examples"></ul>
+
+    <div id="start_lesson" style="display:none;">
+      <div id="exercise"></div>
+      <pre id="code" contenteditable="true" spellcheck="false"></pre>
+      <button id="run">RUN CODE</button>
+      <div id="comment"></div>
+      <div id="output"></div>
+      <div id="hint"><a href="">📺 watch introduction video..</a></div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+// ==========================
+// EXAMPLES FOR Lesson 3g
+// ==========================
+const next_lesson_url = "lesson-04a.html";
+
+const examples = [
+  {
+    name: "1. Array forEach",
+    code: `let fruits = ["apple","banana","cherry"];\nfruits.forEach(function(item){\n  print(item);\n});`,
+    exercise: `Change the array to ["orange","lemon","kiwi"].`,
+    correct: `orange\nlemon\nkiwi`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "2. forEach with index",
+    code: `let colors = ["red","green","blue"];\ncolors.forEach(function(color, index){\n  print(index + ": " + color);\n});`,
+    exercise: `Change the array to ["cyan","magenta","yellow"].`,
+    correct: `0: cyan\n1: magenta\n2: yellow`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "3. Simple object loop (for…in)",
+    code: `let car = {brand:"Toyota", year:2020};\nfor(let key in car){\n  print(key + ": " + car[key]);\n}`,
+    exercise: `Add a property color:"red" and print all properties.`,
+    correct: `brand: Toyota\nyear: 2020\ncolor: red`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "4. Summing array elements with forEach",
+    code: `let numbers = [1,2,3,4];\nlet sum = 0;\nnumbers.forEach(function(n){ sum += n; });\nprint(sum);`,
+    exercise: `Change numbers to [10,20,30] to output 60.`,
+    correct: `60`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "5. Accessing object values dynamically",
+    code: `let student = {name:"Alice", score:95};\nfor(let key in student){\n  print(key + " -> " + student[key]);\n}`,
+    exercise: `Add property grade:"A" and print all properties.`,
+    correct: `name -> Alice\nscore -> 95\ngrade -> A`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "6. Fun array forEach",
+    code: `let boops = ["meh","ok","yay"];\nboops.forEach(function(sound){\n  print("boop: " + sound);\n});`,
+    exercise: `Change the array to ["fun","woo","yay"].`,
+    correct: `boop: fun\nboop: woo\nboop: yay`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "7. Nested object iteration",
+    code: `let game = {title:"Maze", level:3, difficulty:"medium"};\nfor(let key in game){\n  print(key + ": " + game[key]);\n}`,
+    exercise: `Change difficulty to "hard".`,
+    correct: `title: Maze\nlevel: 3\ndifficulty: hard`,
+    hint: `nTBE9wnsgRA`
+  },
+  {
+    name: "8. Combining arrays and objects",
+    code: `let students = [\n  {name:"Alice",score:90},\n  {name:"Bob",score:80}\n];\nstudents.forEach(function(s){ print(s.name + " -> " + s.score); });`,
+    exercise: `Add a student {name:"Charlie",score:70} to output all three.`,
+    correct: `Alice -> 90\nBob -> 80\nCharlie -> 70`,
+    hint: `nTBE9wnsgRA`
+  }
+];
+</script>
+
+<script src="run.js"></script>
+<script src="sfx.js"></script>
+
+</body>
+</html>
